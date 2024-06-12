@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome to WatchTower!</h1>
+    <div>
+        {% if not current_user.is_authenticated %} 
+        <h1>Please Register or Login to continue</h1>
+        <a href="login" class="button blue-button">Login</a>
+        <a href="register" class="button plain-button">Register</a>
+        {% endif %}
+    </div>
+    
+</body>
+</html>
