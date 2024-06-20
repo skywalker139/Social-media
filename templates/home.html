@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock title %}
+{% block content %}
+    {% for post in posts %}
+    <div id="post">
+        <h1>{{ post.title }}</h1>
+        <h3>{{ post.subtitle }}</h3>
+        <div id="media">
+            <p>{{ post.body }}</p>
+        </div>
+        <div id="like and share">
+            <button id="like" class="btn btn-block">❣️</button>
+            <button id="share"><i class="fa-solid fa-share" class="btn">Share</button>
+            <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;"></line>
+        </div>
+    </div>    
+    {% endfor %}    
+{% endblock content %}
